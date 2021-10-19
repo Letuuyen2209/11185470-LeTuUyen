@@ -42,9 +42,15 @@ nav ul li:hover>a{
 /*menu con*/
 /*Ẩn các menu con cấp 1,2,3*/
 nav li ul{
-    display: none;
     min-width: 350px;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
+    background: #444;
+    background: linear-gradient(#444, #111);
+    box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+    border-radius: 3px;
+    transition: all 1s ease-out;
 }
 nav li>ul li{
     width: 100%;
@@ -67,7 +73,10 @@ nav li>ul li:last-child a{
 }
 /*khi hover thì hiện menu con*/
 nav  li:hover > ul{
-    display:  block;
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+    display: block;
 }
 /*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
 nav > ul li > ul li >ul{
